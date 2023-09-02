@@ -42,7 +42,7 @@ function handleOnDrop(e: Event, textarea: TextArea, editor: IDomEditor) {
 
     textarea.isDraggingInternally = false
   }
-
+  console.log('drop.ts onhanderjufdfdf')
   editor.insertData(data)
 
   // When dragging from another source into the editor, it's possible

@@ -137,6 +137,7 @@ async function uploadFile(editor: IDomEditor, file: File) {
  * @param files files
  */
 export default async function (editor: IDomEditor, files: FileList | null) {
+  console.log('export default async function (editor: IDomEditor, files: FileList | null) {');
   if (files == null) return
   const fileList = Array.prototype.slice.call(files)
 
@@ -145,6 +146,7 @@ export default async function (editor: IDomEditor, files: FileList | null) {
 
   // 按顺序上传
   for await (const file of fileList) {
+    console.log('for await (const file of fileList) {')
     const size = file.size // size kb
     if (base64LimitSize && size <= base64LimitSize) {
       // 允许 base64 ，而且 size 在 base64 限制之内，则插入 base64 格式

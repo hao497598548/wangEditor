@@ -140,6 +140,7 @@ function handleBeforeInput(e: Event, textarea: TextArea, editor: IDomEditor) {
 
       if (data instanceof DataTransfer) {
         // 这里处理非纯文本（如 html 图片文件等）的粘贴。对于纯文本的粘贴，使用 paste 事件
+        debugger
         editor.insertData(data)
       } else if (typeof data === 'string') {
         Editor.insertText(editor, data)

@@ -1,3 +1,11 @@
+/*
+ * @Author: haojiaping haojiaping@xiaohongshu.net
+ * @Date: 2023-09-03 05:21:42
+ * @LastEditors: haojiaping haojiaping@xiaohongshu.net
+ * @LastEditTime: 2023-09-03 06:17:54
+ * @FilePath: /wangEditor/packages/core/src/text-area/event-handlers/paste.ts
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 /**
  * @description 处理 paste 事件
  * @author wangfupeng
@@ -38,6 +46,7 @@ function handleOnPaste(e: Event, textarea: TextArea, editor: IDomEditor) {
 
   const data = event.clipboardData
   if (data == null) return
+  console.log('paset.ts handeronpafdsfdsf')
   editor.insertData(data)
 }
 
